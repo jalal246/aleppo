@@ -1,1 +1,38 @@
-# aleppo
+# General collection for useful node functions.
+
+## is: true or false functions
+
+**isUn(input)**: tests for undefined<br>
+**isNull(input)**: tests for null<br>
+**isObj(input)**: tests for object<br>
+**isBool(input)**: tests for Boolean<br>
+**isNum(input)**: tests for number<br>
+**isStr(input)**: tests for string<br>
+**isFn(input)**: tests for function<br>
+**isSymb(input)**: tests for symbol<br>
+**isArr(input)**: tests for array<br>
+**isZeroLength(input)**: tests for zero length<br>
+**isStrEmpty(input)**: tests if empty string<br>
+**isArrEmpty(input)**: tests if array is empty<br>
+
+## Generators:
+
+**Numbers**:
+
+**const numbers = generators.numbers**:
+
+**numbers.getRandom(min, max, type)**: returns random number in given range.
+
+```
+min, max: range number,
+type: is string. By default will apply for integer random number. for arbitrary value just pass 'any'.
+```
+
+## Getters:
+
+**getters.object(param)**: discovers key and prop.
+
+```
+param  = { foo: 'bar' };
+will return key = foo and prop = bar throws error if empty.
+```
