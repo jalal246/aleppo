@@ -1,4 +1,12 @@
-# General collection for useful node functions.
+## Overview
+Aleppo is lightweight package written in javascript. It's toolbox contains general collection for useful node functions.
+
+## Getting Started
+Clone the repo:
+```sh
+git clone git@github.com:jimmy02020/aleppo.git
+cd aleppo
+```
 
 ## is: true or false functions
 
