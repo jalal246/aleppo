@@ -1,5 +1,5 @@
 ## Overview
-Aleppo is lightweight package written in javascript. It's toolbox contains general collection for useful node functions.
+Aleppo is lightweight package written in javascript. It's toolbox contains general collection functions for node.
 
 ## Getting Started
 Clone the repo:
