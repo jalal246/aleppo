@@ -8,20 +8,12 @@
   },
   "scripts": {
     "test": "mocha --compilers js:babel-core/register test",
-    "test-getters": "mocha --compilers js:babel-core/register test/getters.test.js"
+    "test-delay": "mocha --compilers js:babel-core/register test/getters.delay.test.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Jimmy02020/aleppo.git"
   },
-  "keywords": [
-    "node",
-    "node.js",
-    "es6",
-    "mocha",
-    "javascript-tools",
-    "functions",
-  ],
   "author": "'Jalal <'jimmy002020@gmail.com'>",
   "license": "MIT",
   "bugs": {

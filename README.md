@@ -40,7 +40,6 @@ isArrEmpty(input) //tests if array is empty..
 # Generators:
 
 1. **Numbers**:
-
     ```javascript
     const numbers = generators.numbers;
 
@@ -51,12 +50,27 @@ isArrEmpty(input) //tests if array is empty..
 # Getters:
 
 1. **object**:
-
     ```javascript
     getters.obj(input) // returns key and prop.
     // param  = { foo: 'bar' };
     // will return key = foo and prop = bar throws error if  empty.
     ```
+2. **dealy**:
+    ```javascript
+    getters.delay(option) // returns delay time in microsecondsm according to given option.
+    // getters.delay("10m") ==> 600000
+    ```
+
+    ###### Types of options formats are:
+    * ```y/year/years```: returns delay in years.   
+    * ```d/day/days```: returns delay in days.   
+    * ```h/hour/hours``` : returns delay in hours.   
+    * ```w/week/weeks```:  returns delay in weeks.
+    * ```mo/mos/months``` : returns delay in months.   
+    * ```m/minute/minutes```: returns delay in minutes.
+    * ```s/second/seconds``` : returns delay in seconds.   
+    * ```ms/millisecond/milliseconds``` : returns delay in milliseconds.   
+
 
 # Tests
 
