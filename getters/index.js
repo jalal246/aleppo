@@ -1,2 +1,5 @@
-export { default }
-from './get';
+import { defalult as object } from './object';
+
+module.exports = {
+  object,
+};

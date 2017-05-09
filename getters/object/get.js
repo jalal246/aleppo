@@ -1,4 +1,4 @@
-import { isUn, isNull } from '../is';
+import { isUn, isNull } from '../../is';
 
 /*
  * returns key and prop from given parameter.
