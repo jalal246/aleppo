@@ -31,7 +31,7 @@ type: is string. By default will apply for integer random number. for arbitrary 
 
 ## Getters:
 
-**getters.object(param)**: discovers key and prop.
+**getters.obj(param)**: discovers key and prop.
 
 ```
 param  = { foo: 'bar' };
