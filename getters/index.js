@@ -1,5 +1,5 @@
-import { defalult as object } from './object';
+import obj from './object';
 
 module.exports = {
-  object,
+  obj,
 };

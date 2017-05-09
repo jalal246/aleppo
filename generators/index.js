@@ -1,4 +1,4 @@
-import { defalult as numbers } from './numbers';
+import numbers from './numbers';
 
 module.exports = {
   numbers,

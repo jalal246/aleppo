@@ -1,5 +1,1 @@
-import numbers from './numbers';
-
-module.exports = {
-  numbers,
-};
+export { default } from './numbers';
