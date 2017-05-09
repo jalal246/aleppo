@@ -49,3 +49,6 @@ type: is string. By default will apply for integer random number. for arbitrary 
 param  = { foo: 'bar' };
 will return key = foo and prop = bar throws error if empty.
 ```
+
+## License
+This project is licensed under the [MIT License](https://github.com/Jimmy02020/aleppo/blob/master/LICENSE)
