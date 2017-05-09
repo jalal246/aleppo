@@ -15,7 +15,7 @@ import {
   isZeroLength,
   isStrEmpty,
   isArrEmpty,
-} from '../is';
+} from '../src/is';
 
 const expect = chai.expect;
 

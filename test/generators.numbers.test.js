@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 
 import chai from 'chai';
-import generators from '../generators';
+import generators from '../src/generators';
 
 const numbers = generators.numbers;
 const expect = chai.expect;

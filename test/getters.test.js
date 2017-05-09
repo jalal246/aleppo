@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 
 import chai from 'chai';
-import getters from '../getters';
+import getters from '../src/getters';
 
 const expect = chai.expect;
 

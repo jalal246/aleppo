@@ -1,5 +1,5 @@
-export { default as generators } from './generators';
-export { default as getters } from './getters';
+export { default as generators } from './src/generators';
+export { default as getters } from './src/getters';
 export {
   isUn,
   isNull,
@@ -14,8 +14,8 @@ export {
   isZeroLength,
   isStrEmpty,
   isArrEmpty,
-} from './is';
+} from './src/is';
 
 export {
   hasKey,
-} from './has';
+} from './src/has';
