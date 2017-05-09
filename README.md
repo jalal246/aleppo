@@ -7,6 +7,10 @@ Clone the repo:
 git clone git@github.com:jimmy02020/aleppo.git
 cd aleppo
 ```
+npm
+```sh
+$ npm install aleppo
+```
 
 ## is: true or false functions
 
