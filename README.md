@@ -19,7 +19,7 @@ $ npm install aleppo
 
 # Usage
 
-# is: true or false functions
+# IS: true or false functions
 
 ```javascript
 isUn(input) //tests for undefined.
