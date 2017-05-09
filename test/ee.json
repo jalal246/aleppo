@@ -3,31 +3,18 @@
   "version": "1.0.0-rc.1",
   "description": "General node functions, useful for any project.",
   "main": "index.js",
-  "directories": {
+  "directories ": {
     "test": "test"
   },
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register test"
+    "test": "mocha --compilers js:babel-core/register test",
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Jimmy02020/aleppo.git"
   },
   "keywords": [
-    "javascript-tools",
-    "javascript",
-    "nodejs",
-    "node",
-    "node-js",
-    "nodejs-modules",
-    "node-modules",
-    "functions",
-    "random",
-    "boolean",
-    "delay",
-    "date",
-    "promose",
-    "then"
+    "express",
   ],
   "author": "'Jalal <'jimmy002020@gmail.com'>",
   "license": "MIT",
