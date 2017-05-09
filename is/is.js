@@ -3,6 +3,7 @@
 // typeof functions
 const isUn = candidate => typeof candidate === 'undefined';
 const isNull = candidate => candidate === null;
+const isValid = candidate => !isUn(candidate) && !isNull(candidate);
 const isObj = candidate => typeof candidate === 'object';
 const isBool = candidate => typeof candidate === 'boolean';
 const isNum = candidate => typeof candidate === 'number';
@@ -21,6 +22,7 @@ const isArrEmpty = array => isArr(array) && isZeroLength(array);
 export {
   isUn,
   isNull,
+  isValid,
   isObj,
   isBool,
   isNum,

@@ -3,6 +3,7 @@ export { default as getters } from './getters';
 export {
   isUn,
   isNull,
+  isValid,
   isObj,
   isBool,
   isNum,

@@ -4,6 +4,7 @@
 
 **isUn(input)**: tests for undefined<br>
 **isNull(input)**: tests for null<br>
+**isValid(input)**: tests for not being undefined or null <br>
 **isObj(input)**: tests for object<br>
 **isBool(input)**: tests for Boolean<br>
 **isNum(input)**: tests for number<br>

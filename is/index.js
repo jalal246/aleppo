@@ -1,6 +1,7 @@
 export {
   isUn,
   isNull,
+  isValid,
   isObj,
   isBool,
   isNum,
