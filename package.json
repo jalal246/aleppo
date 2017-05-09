@@ -1,6 +1,6 @@
 {
   "name": "aleppo",
-  "version": "0.0.0-beta.1",
+  "version": "1.0.0-rc.1",
   "description": "General node functions, useful for any project.",
   "main": "index.js",
   "directories": {
@@ -25,9 +25,13 @@
     "babel-core": "6.24.1",
     "babel-preset-es2015": "6.24.1",
     "chai": "3.5.0",
+    "chai-as-promised": "6.0.0",
     "eslint": "3.19.0",
     "eslint-config-airbnb-base": "11.1.3",
     "eslint-plugin-import": "2.2.0",
     "mocha": "3.3.0"
+  },
+  "dependencies": {
+    "bluebird": "3.5.0"
   }
 }

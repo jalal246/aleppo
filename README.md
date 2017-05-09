@@ -55,7 +55,7 @@ isArrEmpty(input) //tests if array is empty..
     // param  = { foo: 'bar' };
     // will return key = foo and prop = bar throws error if  empty.
     ```
-2. **dealy**:
+2. **delay**:
     ```javascript
     getters.delay(option) // returns delay time in microsecondsm according to given option.
     // getters.delay("10m") ==> 600000
@@ -71,6 +71,12 @@ isArrEmpty(input) //tests if array is empty..
     * ```s/second/seconds``` : returns delay in seconds.   
     * ```ms/millisecond/milliseconds``` : returns delay in milliseconds.   
 
+# wait:
+```javascript
+wait(option).then(() => console.log('Hello!')) // returns promise.
+// wait('20s').then(() => console.log('Hello!')); // 'Hello! will be printed after 20 seconds'
+```
+  * options allowed in wait are the same in delay function.
 
 # Tests
 

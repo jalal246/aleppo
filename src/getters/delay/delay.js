@@ -8,6 +8,12 @@ import {
   YEAR,
 } from './constants';
 
+import { isValid } from '../../is';
+
+const err = (opt) => {
+  throw new Error(`Ops! Cannot recognize option format: ${opt}`);
+};
+
 /**
  * Calculate time duration accourding to given time format.
  *
@@ -56,13 +62,19 @@ const get = (val, opt) => {
     case 'y':
       return val * YEAR;
     default:
-      throw new Error(`Ops! Cannot recognize option format: ${opt}`);
+      return err(val);
   }
 };
 
 const delay = (val) => {
-  const valArray = val.split(/(\d+)/);
-  return get(parseInt(valArray[1].trim(), 10), valArray[2].trim().toLowerCase());
+  if (isValid(val)) {
+    const valArray = val.split(/(\d+)/);
+    return get(
+      isValid(valArray[1]) && parseInt(valArray[1].trim(), 10),
+      isValid(valArray[2]) && valArray[2].trim().toLowerCase(),
+    );
+  }
+  return err(val);
 };
 
 export default delay;

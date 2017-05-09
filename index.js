@@ -19,3 +19,7 @@ export {
 export {
   hasKey,
 } from './src/has';
+
+export {
+  wait,
+} from './src/wait';

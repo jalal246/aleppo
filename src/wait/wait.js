@@ -1,8 +1,12 @@
-import { Promise } from './modules';
-import getDelayDuration from './getDelayDuration';
+import Promise from './modules';
+import getters from '../getters';
 
-const wait = time => new Promise(resolve => setTimeout(resolve, getDelayDuration(time)));
+const wait = time => new Promise((resolve, reject) => {
+  try {
+    setTimeout(resolve, getters.delay(time));
+  } catch (e) {
+    reject(e);
+  }
+});
 
 export default wait;
-
-// wait(30, 's').then(() => console.log('Hello!')); // 'Hello! will be printed after 30 seconds'
