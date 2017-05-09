@@ -1,8 +1,5 @@
-import {
-  isObj,
-  isUn,
-  isNull,
-} from '../is';
+import { isUn, isNull } from '../is';
+
 /*
  * returns key and prop from given parameter.
  * @param {object} obj.
@@ -18,16 +15,9 @@ const object = (obj) => {
     if (!isNull(key) && !isNull(prop)) {
       return { key, prop };
     }
-    throw new Error(`
-      Please, enter valid object parameter
-      [${obj}]
-      `);
-  } else {
-    throw new Error(`
-    Please, enter valid object parameter
-    [${obj}]
-    `);
+    return err(obj);
   }
+  return err(obj);
 };
 
 module.exports = {
