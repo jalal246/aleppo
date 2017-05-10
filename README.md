@@ -46,6 +46,8 @@ isArrEmpty(input) //tests if array is empty..
     numbers.getRandom(min, max, type) //returns random number in given range.
     // type: is string. By default will apply for integer random number. for arbitrary value just pass 'any'.
     ```
+    * full credit for this function goes to
+    [Ionuț G. Stan](https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range).
 
 # Getters:
 
@@ -73,10 +75,12 @@ isArrEmpty(input) //tests if array is empty..
 
 # wait:
 ```javascript
-wait(option).then(() => console.log('Hello!')) // returns promise.
+wait(option).then(() => /*do something*/) // returns promise.
 // wait('20s').then(() => console.log('Hello!')); // 'Hello! will be printed after 20 seconds'
 ```
-  * options allowed in wait are the same in delay function.
+* options allowed in wait are the same in delay function.
+* full credit for this function goes to
+  [Eric Elliott](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261).
 
 # Tests
 
