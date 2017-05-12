@@ -38,10 +38,10 @@ isArrEmpty(...inputs) //tests if arrays are empty.
 ```
 * IS-functions can deal with one argument or multiple arguments.   
 example:
-```javascript
-isZeroLength('hi', 'test', 'i am here'); // returns false.
-isNum(1,2,4,5,7,8,1000); // returns true.
-```
+  ```javascript
+  isZeroLength('hi', 'test', 'i am here'); // returns false.
+  isNum(1,2,4,5,7,8,1000); // returns true.
+  ```
 
 
 # doo: resolve multiple arguments with multiple functions in one call.
