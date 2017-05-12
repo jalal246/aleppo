@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register test"
+    "test": "mocha --compilers js:babel-core/register --require babel-polyfill test"
   },
   "repository": {
     "type": "git",
@@ -38,9 +38,11 @@
   "devDependencies": {
     "babel-cli": "6.24.1",
     "babel-core": "6.24.1",
+    "babel-polyfill": "6.23.0",
     "babel-preset-es2015": "6.24.1",
     "chai": "3.5.0",
     "chai-as-promised": "6.0.0",
+    "chai-iterator": "1.1.4",
     "eslint": "3.19.0",
     "eslint-config-airbnb-base": "11.1.3",
     "eslint-plugin-import": "2.2.0",

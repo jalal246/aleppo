@@ -1,4 +1,3 @@
-// credit to: https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range\
 
 // verfying parameters should be before calling this func.
 const getRandom = (min, max, type = 'int') => {

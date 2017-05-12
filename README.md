@@ -22,27 +22,45 @@ $ npm install aleppo
 # IS: true or false functions
 
 ```javascript
-isUn(input) //tests for undefined.
-isNull(input) //tests for null.
-isValid(input) //tests for not being undefined or null.
-isObj(input) //tests for object.
-isBool(input) //tests for Boolean.
-isNum(input) //tests for number.
-isStr(input) //tests for string.
-isFn(input) //tests for function.
-isSymb(input) //tests for symbol.
-isArr(input) //tests for array.
-isZeroLength(input) //tests for zero length.
-isStrEmpty(input) //tests if string is empty.
-isArrEmpty(input) //tests if array is empty..
+isUn(...inputs) //tests for undefineds.
+isNull(...inputs) //tests for nulls.
+isValid(...inputs) //tests for not being undefineds or nulls.
+isObj(...inputs) //tests for objects.
+isBool(...inputs) //tests for Booleans.
+isNum(...inputs) //tests for numbers.
+isStr(...inputs) //tests for strings.
+isFn(...inputs) //tests for functions.
+isSymb(...inputs) //tests for symbols.
+isArr(...inputs) //tests for arrays.
+isZeroLength(...inputs) //tests for zero length.
+isStrEmpty(...inputs) //tests if strings are empty.
+isArrEmpty(...inputs) //tests if arrays are empty.
+```
+* IS-functions can deal with one argument or multiple arguments.   
+example:
+```javascript
+isZeroLength('hi', 'test', 'i am here'); // returns false.
+isNum(1,2,4,5,7,8,1000); // returns true.
+```
+
+
+# doo: resolve multiple arguments with multiple functions in one call.
+```javascript
+import doo from 'aleppo'
+
+doo.iterator([...funcs],[...args]) //returns iterator object of results.
+doo.array([...funcs],[...args]) //returns array of results.
+doo.object([...funcs],[...args]) //returns array of objects [{func: 'Function name', result: 'result of the function'}]
 ```
 
 # Generators:
+```javascript
+import generators from 'aleppo'
+```
 
 1. **Numbers**:
     ```javascript
-    const numbers = generators.numbers;
-
+    const numbers = generators.numbers
     numbers.getRandom(min, max, type) //returns random number in given range.
     // type: is string. By default will apply for integer random number. for arbitrary value just pass 'any'.
     ```
@@ -50,6 +68,9 @@ isArrEmpty(input) //tests if array is empty..
     [Ionuț G. Stan](https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range).
 
 # Getters:
+ ```javascript
+ import getters from 'aleppo'
+ ```
 
 1. **object**:
     ```javascript
@@ -57,6 +78,8 @@ isArrEmpty(input) //tests if array is empty..
     // param  = { foo: 'bar' };
     // will return key = foo and prop = bar throws error if  empty.
     ```
+
+
 2. **delay**:
     ```javascript
     getters.delay(option) // returns delay time in microsecondsm according to given option.
@@ -68,14 +91,15 @@ isArrEmpty(input) //tests if array is empty..
     * ```d/day/days```: returns delay in days.   
     * ```h/hour/hours``` : returns delay in hours.   
     * ```w/week/weeks```:  returns delay in weeks.
-    * ```mo/mos/months``` : returns delay in months.   
+    * ```mo/mos/month/months``` : returns delay in months.   
     * ```m/minute/minutes```: returns delay in minutes.
     * ```s/second/seconds``` : returns delay in seconds.   
     * ```ms/millisecond/milliseconds``` : returns delay in milliseconds.   
 
 # wait:
 ```javascript
-wait(option).then(() => /*do something*/) // returns promise.
+import wait from 'aleppo'
+wait(option) // returns promise.
 // wait('20s').then(() => console.log('Hello!')); // 'Hello! will be printed after 20 seconds'
 ```
 * options allowed in wait are the same in delay function.
