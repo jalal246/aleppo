@@ -88,7 +88,7 @@ import generators from 'aleppo'
     ```javascript
     // example
     getters.delay('1h') //  3600000.
-    getters.delay('10m')  + Date.now() // returns time after ten minutes in milliseconds
+    getters.delay('10m') + Date.now() // returns time after ten minutes in milliseconds
     ```
 
     ###### Types of options formats are:
