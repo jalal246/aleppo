@@ -73,7 +73,7 @@ import generators from 'aleppo'
  ```
 
 1. **object**: returns key and prop for unknown input.
-#### getters.obj(input):  
+**getters.obj(input)**
 
     ```javascript
     // example:
@@ -83,7 +83,7 @@ import generators from 'aleppo'
 
 
 2. **delay**: calculates delay time according to given option.   
-#### getters.delay(option):
+**getters.delay(option)**
 
     ```javascript
     // example
