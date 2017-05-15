@@ -72,18 +72,18 @@ import generators from 'aleppo'
  import getters from 'aleppo'
  ```
 
-1. **object**: returns key and prop for unknown input.   
-**getters.obj(input)**
+1. **object**: returns key and prop for unknown input.
+#### getters.obj(input)
 
-  ```javascript
-  // example:
-  const test  = { foo: 'bar' };
-  getters.obj(test); // will return:  key = foo, prop = bar
-  ```
+    ```javascript
+    // example:
+    const test  = { foo: 'bar' };
+    getters.obj(test); // will return:  key = foo, prop = bar
+    ```
 
 
 2. **delay**: calculates delay time according to given option.   
-**getters.delay(option)**
+#### getters.delay(option)
 
     ```javascript
     // example
