@@ -44,7 +44,7 @@ example:
   ```
 
 
-# doo: resolve multiple arguments with multiple functions in one call.
+# doo: resolves multiple arguments with multiple functions in one call.
 ```javascript
 import doo from 'aleppo'
 
@@ -72,18 +72,23 @@ import generators from 'aleppo'
  import getters from 'aleppo'
  ```
 
-1. **object**:
-    ```javascript
-    getters.obj(input) // returns key and prop.
-    // param  = { foo: 'bar' };
-    // will return key = foo and prop = bar throws error if  empty.
-    ```
+1. **object**: returns key and prop for unknown input.   
+**getters.obj(input)**
+
+  ```javascript
+  // example:
+  const test  = { foo: 'bar' };
+  getters.obj(test); // will return:  key = foo, prop = bar
+  ```
 
 
-2. **delay**:
+2. **delay**: calculates delay time according to given option.   
+**getters.delay(option)**
+
     ```javascript
-    getters.delay(option) // returns delay time in microsecondsm according to given option.
-    // getters.delay("10m") ==> 600000
+    // example
+    getters.delay('1h') //  3600000.
+    getters.delay('10m')  + Date.now() // returns time after ten minutes in milliseconds
     ```
 
     ###### Types of options formats are:
@@ -96,11 +101,12 @@ import generators from 'aleppo'
     * ```s/second/seconds``` : returns delay in seconds.   
     * ```ms/millisecond/milliseconds``` : returns delay in milliseconds.   
 
-# wait:
+# wait: sugared setTimeout() method but it returns promise.
+**wait(option)**
+
 ```javascript
 import wait from 'aleppo'
-wait(option) // returns promise.
-// wait('20s').then(() => console.log('Hello!')); // 'Hello! will be printed after 20 seconds'
+wait('20s').then(() => console.log('Hello!')); // 'Hello! will be printed after 20 seconds'
 ```
 * options allowed in wait are the same in delay function.
 * full credit for this function goes to

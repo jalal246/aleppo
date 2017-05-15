@@ -69,10 +69,12 @@ const get = (val, opt) => {
 const delay = (val) => {
   if (isValid(val)) {
     const valArray = val.split(/(\d+)/);
-    return get(
-      isValid(valArray[1]) && parseInt(valArray[1].trim(), 10),
-      isValid(valArray[2]) && valArray[2].trim().toLowerCase(),
-    );
+    const value = valArray[1];
+    const opt = valArray[2];
+    if (isValid(value, opt)) {
+      return get(parseInt(value.trim(), 10), opt.trim().toLowerCase());
+    }
+    return err(val);
   }
   return err(val);
 };
