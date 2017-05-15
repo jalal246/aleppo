@@ -72,7 +72,7 @@ import generators from 'aleppo'
  import getters from 'aleppo'
  ```
 
-1. **object**: returns key and prop for unknown input.
+1. **object**: returns key and prop for unknown input.   
 **getters.obj(input)**
 
     ```javascript
