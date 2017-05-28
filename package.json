@@ -26,6 +26,7 @@
     "boolean",
     "delay",
     "date",
+    "time",
     "promose",
     "then"
   ],
