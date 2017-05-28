@@ -1,4 +1,4 @@
-import Promise from './modules';
+import Promise from './deps';
 import getters from '../getters';
 
 const wait = time => new Promise((resolve, reject) => {

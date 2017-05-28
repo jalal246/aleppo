@@ -1,4 +1,3 @@
-// import Promise from './modules';
 /* eslint func-names: ["error", "as-needed"]*/
 function* iterator(funcs, candidates) {
   for (let j = 0; j < candidates.length; j += 1) {
