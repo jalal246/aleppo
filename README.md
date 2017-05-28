@@ -91,7 +91,7 @@ import generators from 'aleppo'
     getters.delay('10m') + Date.now() // returns time after ten minutes in milliseconds
     ```
 
-    ###### Types of options formats are:
+    #### Types of options formats are:
     * ```y/year/years```: returns delay in years.   
     * ```d/day/days```: returns delay in days.   
     * ```h/hour/hours``` : returns delay in hours.   
@@ -106,13 +106,13 @@ import generators from 'aleppo'
     ```javascript
     const date = getter.date
     ```
-    ###### date.now(option|options)
-    ###### date.later(option, {ts|full date})  
-    ###### date.ago(option, {ts|full date})
-    ###### date.readTs(timestamp)
-    ###### date.isLeap(year)
-    ###### date.isCommon(year)
-    ###### date.yearType(year)
+    ##### date.now(option|options)
+    ##### date.later(option, {ts|full date})  
+    ##### date.ago(option, {ts|full date})
+    ##### date.readTs(timestamp)
+    ##### date.isLeap(year)
+    ##### date.isCommon(year)
+    ##### date.yearType(year)
 
     ###### Types of options formats are:
     * ```year/years/yrs/yyyy```: full year/ four digits.
