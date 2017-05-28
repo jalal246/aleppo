@@ -135,6 +135,7 @@ import generators from 'aleppo'
     * ```local time/localTime``` : local time.  (available only for now function)
     * ```'-' or '/' or'.' or':' or ' ' ``` : separators accepted for multiple request (available only for now function)
 
+    Examples:
     ```javascript
     const date = getter.date
     date.now('ts') // return current timestamp 1495989532977.
@@ -153,6 +154,7 @@ import generators from 'aleppo'
     date.isCommon(2018) // true
     date.yearType(2018) // common
     ```
+
     * You can use ```full date/fullDate/f``` for passing full date arguments to later or ago functions and it's optional.
     * You can use ```ts/timestamp``` for passing timestampe argument to later or ago functions and it's optional as well.
 
