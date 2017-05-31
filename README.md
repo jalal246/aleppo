@@ -104,15 +104,15 @@ import generators from 'aleppo'
 
 3. **date**: deals with time and date, in readable form.
     ```javascript
-    const date = getter.date
+    const date = getters.date
     ```
-    ##### date.now(option|options)
-    ##### date.later(option, {ts|full date})  
-    ##### date.ago(option, {ts|full date})
-    ##### date.readTs(timestamp)
-    ##### date.isLeap(year)
-    ##### date.isCommon(year)
-    ##### date.yearType(year)
+    * date.now(option|options)
+    * date.later(option, {ts|full date})  
+    * date.ago(option, {ts|full date})
+    * date.readTs(timestamp)
+    * date.isLeap(year)
+    * date.isCommon(year)
+    * date.yearType(year)
 
     ###### Types of options formats are:
     * ```year/years/yrs/yyyy```: full year/ four digits.
@@ -137,7 +137,7 @@ import generators from 'aleppo'
 
     Examples:
     ```javascript
-    const date = getter.date
+    const date = getters.date
     date.now('ts') // return current timestamp 1495989532977.
     date.now('hr:day:mo:week')// returns current required form 18:Sunday:5:21
     date.now('year:day:week:month:second') // returns 2017:Sunday:21:May:52
