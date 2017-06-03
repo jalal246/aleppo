@@ -32,6 +32,7 @@ Documentation
 ### Getters
 * [obj](#getters_obj)
 * [delay](#getters_delay)
+  * [options allowed](#getters_delay_options)
 * [date](#getters_date)
   * [options allowed](#getters_date_options)
   * [date.now](#getters_date_now)
@@ -82,6 +83,7 @@ isUn('hi', 'there', 'I am defined') // false
 isUn('defined', y, undefined) // false. one of parameters failed to pass.
 ```
 <a name="isNull" />
+
 ### isNull(...inputs)
 
 Checks if null returns true otherwise returns false.
@@ -96,6 +98,7 @@ isNull(undefined, null, 'still', 'false', 'because', 'of undefined and null') //
 ```
 
 <a name="isValid" />
+
 ### isValid(...inputs)
 
 Checks if not being undefined or null returns true otherwise returns false.
@@ -109,6 +112,7 @@ isValid(null, "hi") // false, one of the parameters failed.
 isValid(undefined, null, 'still', 'false', 'because', 'of undefined and null') // false
 ```
 <a name="isObj" />
+
 ### isObj(...inputs)
 
 Checks if object returns true otherwise returns false.
@@ -121,6 +125,7 @@ isObj({ boo: 'foo' }, { baz: 'doo' }) // true
 isObj(null, { boo: 'foo' }, { baz: 'doo' }) // false
 ```
 <a name="isBool" />
+
 ### isBool(...inputs)
 
 Checks if Boolean returns true otherwise returns false.
@@ -133,6 +138,7 @@ isBool(true, false) // true
 isBool(1,2,3,4,5,6,7,100) // false
 ```
 <a name="isNum" />
+
 ### isNum(...inputs)
 
 Checks if numbers returns true otherwise returns false.
@@ -146,6 +152,7 @@ isNum(1,2,3,4,5,6,7,100) // true
 ```
 
 <a name="isStr" />
+
 ### isStr(...inputs)
 
 Checks if string returns true otherwise returns false.
@@ -159,6 +166,7 @@ isStr(1,2,3,4,5,6,7,100) // false
 ```
 
 <a name="isFn" />
+
 ### isFn(...inputs)
 
 Checks if function returns true otherwise returns false.
@@ -172,6 +180,7 @@ isFn(1,2,3,4,5,6,7,100) // false
 ```
 
 <a name="isArr" />
+
 ### isArr(...inputs)
 
 Checks if arrays returns true otherwise returns false.
@@ -185,6 +194,7 @@ isArr(1,2,3,4,5,6,7,100, 'string') // false
 ```
 
 <a name="isZeroLength" />
+
 ### isZeroLength(...inputs)
 
 Checks if strings zero length returns true otherwise returns false.
@@ -198,6 +208,7 @@ isZeroLength([1,2,3,4,5,6,7,100], 'string', [], '') // false
 ```
 
 <a name="isStrEmpty" />
+
 ### isStrEmpty(...inputs)
 
 Checks if strings are empty returns true otherwise returns false.
@@ -211,6 +222,7 @@ isStrEmpty('not empty string') // false
 ```
 
 <a name="isArrEmpty" />
+
 ### isArrEmpty(...inputs)
 
 Checks if arrays are empty returns true otherwise returns false.
@@ -230,6 +242,7 @@ Executes multiple arguments with multiple functions in one call. Returns the res
 It passes each argument to all functions, after it's done with the first argument, it moves to process the second argument, so on so forth.
 
 <a name="doo_iterator" />
+
 ### doo.iterator
 
 Returns [iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) object of results.
@@ -260,6 +273,7 @@ result.next() // { value: undefined, done: true }
  ```
 
 <a name="doo_array" />
+
 ### doo.array
 
 Returns array of results.
@@ -275,6 +289,7 @@ console.log(result);
 ```
 
 <a name="doo_object" />
+
 ### doo.object
 
 Returns array of objects [{func: 'Function name', result: 'result of the function'}]
@@ -304,6 +319,7 @@ import getters from 'aleppo'
 ```
 
 <a name="getters_object" />
+
 ### obj: getters.obj({ parameter })
 
 Returns key and prop for unknown input object.
@@ -318,11 +334,14 @@ getters.obj(test).prop; // bar
 ```
 
 <a name="getters_delay" />
+
 ### Delay: getters.delay(option)
 
 Calculates delay time according to given option then returns it in milliseconds.
 
-##### Types of options formats are:
+<a name= "getters_delay_options" />
+
+###### Types of options formats are:
 * ```year/years/yrs/y/yy/yyy/yyyy```: delay by years.   
 * ```d/dd/day/days```: delay by days.   
 * ```h//hr/hrs/hour/hours``` : delay by hours.   
@@ -342,11 +361,13 @@ setTimeout(()=>'hello from the other side', getters.delay('10m') + Date.now());
 ```
 
 <a name="getters_date" />
+
 ### Date:
 
 Deals with time and date, in readable form. It has seven major helper function to compute time and date.
 
 <a name= "getters_date_now" />
+
 #### date.now(option|options)
 
 Returns any required format according to the current time or date.
@@ -368,6 +389,7 @@ date.now('year:day:week:month:second')
 ```
 
 <a name= "getters_date_later" />
+
 #### date.later(option, {ts|fulldate})
 
 Returns any required format for time or date will happen later. Like 2 days later from now or three months later.. etc.
@@ -392,6 +414,7 @@ date.later('30months', 'full date')
 ```
 
 <a name= "getters_date_ago" />     
+
 #### date.ago(option, {ts|full date})
 
 Returns any required format for time or date happened ago. Like 2 days ago from now or three months ago.. etc.
@@ -412,6 +435,7 @@ date.ago('8min', 'full date')
 ```
 
 <a name= "getters_date_readTs" />
+
 #### date.readTs(timestamp)
 
 Returns readable timestamp object.
@@ -426,6 +450,7 @@ date.readTs(1503247105430)
 ```
 
 <a name= "getters_date_isLeap" />
+
 #### date.isLeap(year)
 
 Returns true if the years is [leap](https://en.wikipedia.org/wiki/Leap_year), false for otherwise.
@@ -439,7 +464,8 @@ date.isLeap(2028) // true
 date.isLeap(2018) // false
 ```
 
-<a name= "getters_date_isCommon" />   
+<a name= "getters_date_isCommon" />
+
 #### date.isCommon(year)
 
 Returns true if the years is [common](https://en.wikipedia.org/wiki/Common_year), false for otherwise.
@@ -455,6 +481,7 @@ date.isCommon(2018) // true
 
 
 <a name= "getters_date_yearType" />
+
 #### date.yearType(year)
 
 Returns the year type [common](https://en.wikipedia.org/wiki/Common_year), or [leap](https://en.wikipedia.org/wiki/Leap_year).
@@ -470,6 +497,7 @@ date.yearType(2028) // leap
 ```
 
 <a name= "getters_date_options" />
+
 ###### Types of options formats are:           
 
 * ```year/years/yrs/yyyy```: full year/ four digits.
