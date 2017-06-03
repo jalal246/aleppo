@@ -54,8 +54,8 @@ describe('is', () => {
   });
   describe('single argument', () => {
     describe('should return true', () => {
-      it('1-tests undefined as undefined', () => expect(isUn(undefined, undefined, undefined)).to.be.true);
-      it('2-tests null as null', () => expect(isNull(null, null, null)).to.be.true);
+      it('1-tests undefined as undefined', () => expect(isUn(undefined)).to.be.true);
+      it('2-tests null as null', () => expect(isNull(null)).to.be.true);
       it('3-tests "welcome" as valid', () => expect(isValid('welcome')).to.be.true);
       it('4-tests {boo : foo} as object', () => expect(isObj({ boo: 'foo' })).to.be.true);
       it('5-tests true as boolean', () => expect(isBool(true)).to.be.true);

@@ -1,42 +1,77 @@
-# Overview
+# Aleppo
 
-Aleppo is lightweight package written in javascript. It's toolbox contains general collection functions for node.
+Overview
+--------
+Aleppo is utility functions written in [JavaScript](http://en.wikipedia.org/wiki/JavaScript).
 
-# Getting Started
+Getting Started
+---------------
 
 clone the repo:
-
 ```sh
 git clone git@github.com:jimmy02020/aleppo.git
 cd aleppo
 ```
 
-npm
-
+ npm
 ```sh
 $ npm install aleppo
 ```
 
-# Usage
+Usage
+-----
 
-# IS: true or false validation functions
+```js
+import aleppo from 'aleppo'```
+
+<a name="IS" />
+### IS
+
+True or false validation functions.
+
+__Examples__
 
 ```javascript
-isUn(...inputs) //tests for undefineds.
-isNull(...inputs) //tests for nulls.
-isValid(...inputs) //tests for not being undefineds or nulls.
-isObj(...inputs) //tests for objects.
-isBool(...inputs) //tests for Booleans.
-isNum(...inputs) //tests for numbers.
-isStr(...inputs) //tests for strings.
-isFn(...inputs) //tests for functions.
-isSymb(...inputs) //tests for symbols.
-isArr(...inputs) //tests for arrays.
-isZeroLength(...inputs) //tests for zero length.
-isStrEmpty(...inputs) //tests if strings are empty.
-isArrEmpty(...inputs) //tests if arrays are empty.
+//checks if inputs are undefined
+isUn(...inputs)
+
+//checks if inputs are null
+isNull(...inputs)
+
+//checks for not being undefined or null
+isValid(...inputs)
+
+//checks if inputs are object
+isObj(...inputs)
+
+//checks if inputs are Booleans
+isBool(...inputs)
+
+//checks if inputs are numbers
+isNum(...inputs)
+
+//checks if inputs are strings
+isStr(...inputs)
+
+//checks if inputs are functions
+isFn(...inputs)
+
+//checks if inputs are symbols
+isSymb(...inputs)
+
+//checks if inputs are arrays
+isArr(...inputs)
+
+//checks if strings zero length
+isZeroLength(...strings)
+
+//checks if strings are empty
+isStrEmpty(...strings)
+
+//checks if arrays are empty
+isArrEmpty(...arrays)
 ```
-* IS-functions can deal with one argument or multiple arguments.   
+* IS-functions can deal with one argument or multiple arguments as it accepts the [spread syntax](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Spread_operator).   
 
   ```javascript
   //example
