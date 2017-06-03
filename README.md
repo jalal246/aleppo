@@ -46,6 +46,8 @@ Documentation
 * [Tests](#Tests)
 * [License](#License)
 
+
+
 Getting Started
 ---------------
 
@@ -66,7 +68,7 @@ Validation - IS
 Boolean validation functions. IS-functions can deal with one argument or multiple arguments as it accepts the [spread syntax](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Spread_operator).   
 
 <a name="isUn" />
-### isUn(...inputs)
+### isUn
 
 Checks if undefined returns true, otherwise returns false.
 
@@ -294,7 +296,7 @@ console.log(result);
 Getters
 -------
 
-Gets object, data, or delay. As required form.
+Gets object, data, or delay in required form.
 
 ```javascript
 import getters from 'aleppo'
@@ -467,7 +469,7 @@ date.yearType(2028) // leap
 ```
 
 <a name= "getters_date_options" />
-###### Types of options formats are:       
+###### Types of options formats are:           
 
 * ```year/years/yrs/yyyy```: full year/ four digits.
 * ```y/yy/yyy```: two digits year.
