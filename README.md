@@ -68,7 +68,8 @@ Validation - IS
 Boolean validation functions. IS-functions can deal with one argument or multiple arguments as it accepts the [spread syntax](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Spread_operator).   
 
 <a name="isUn" />
-### isUn
+
+### isUn (...inputs)
 
 Checks if undefined returns true, otherwise returns false.
 
