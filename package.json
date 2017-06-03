@@ -1,6 +1,6 @@
 {
   "name": "aleppo",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "General node functions, useful for any project.",
   "main": "index.js",
   "directories": {

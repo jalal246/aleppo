@@ -2,6 +2,10 @@
 checker
 # has
 has
+# wait
+wait
+# generators
+generators
 # Logs
 logs
 *.log
