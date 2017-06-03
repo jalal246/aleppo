@@ -54,20 +54,6 @@ doo.array([...funcs],[...args]) //returns array of results.
 doo.object([...funcs],[...args]) //returns array of objects [{func: 'Function name', result: 'result of the function'}]
 ```
 
-# Generators:
-```javascript
-import generators from 'aleppo'
-```
-
-1. **Numbers**:
-    ```javascript
-    const numbers = generators.numbers
-    numbers.getRandom(min, max, type) //returns random number in given range.
-    // type: is string. By default will apply for integer random number. for arbitrary value just pass 'any'.
-    ```
-    * full credit for this function goes to
-    [Ionuț G. Stan](https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range).
-
 # Getters:
  ```javascript
  import getters from 'aleppo'
@@ -159,17 +145,6 @@ import generators from 'aleppo'
     * You can use ```full date/fullDate/f``` for passing full date arguments to later or ago functions and it's optional.
     * You can use ```ts/timestamp``` for passing timestampe argument to later or ago functions and it's optional as well.
 
-
-# wait: sugared setTimeout() method but it returns promise.
-**wait(option)**
-
-```javascript
-import wait from 'aleppo'
-wait('20s').then(() => console.log('Hello!')); // 'Hello! will be printed after 20 seconds'
-```
-* options allowed in wait are the same in delay function.
-* full credit for this function goes to
-  [Eric Elliott](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261).
 
 # Tests
 
