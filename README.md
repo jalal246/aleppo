@@ -26,8 +26,8 @@ Use aleppo as a regular module:
 import aleppo from 'aleppo'
 ```
 
-<a name="IS" />
-IS
+<a name="is" />
+### IS
 
 Boolean validation functions.
 
