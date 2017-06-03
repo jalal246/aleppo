@@ -20,9 +20,11 @@ $ npm install aleppo
 
 Usage
 -----
+Use aleppo as a regular module:
 
 ```js
-import aleppo from 'aleppo'```
+import aleppo from 'aleppo'
+```
 
 <a name="IS" />
 ### IS
