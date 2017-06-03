@@ -29,7 +29,7 @@ import aleppo from 'aleppo'
 <a name="IS" />
 ### IS
 
-True or false validation functions.
+Boolean validation functions.
 
 __Examples__
 
