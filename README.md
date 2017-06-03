@@ -27,7 +27,7 @@ import aleppo from 'aleppo'
 ```
 
 <a name="IS" />
-### IS
+IS
 
 Boolean validation functions.
 
