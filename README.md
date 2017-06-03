@@ -467,7 +467,8 @@ date.yearType(2028) // leap
 ```
 
 <a name= "getters_date_options" />
-###### Types of options formats are:
+###### Types of options formats are:       
+
 * ```year/years/yrs/yyyy```: full year/ four digits.
 * ```y/yy/yyy```: two digits year.
 * ```mo/mos```: month in number.      
