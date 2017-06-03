@@ -12,7 +12,6 @@ const greetings = name => `hello ${name}`;
 const friendly = name => `how are you ${name} today?`;
 const bye = name => `goodbye ${name}!`;
 
-
 chai.use(chaiIterator);
 
 describe('doo', () => {

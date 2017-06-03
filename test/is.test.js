@@ -19,7 +19,6 @@ import {
 
 const expect = chai.expect;
 
-
 describe('is', () => {
   describe('multiple arguments', () => {
     describe('should return true', () => {
