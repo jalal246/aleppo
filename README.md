@@ -1,5 +1,5 @@
-# Aleppo
-
+Overview
+--------
 Aleppo is utility functions written in [JavaScript](http://en.wikipedia.org/wiki/JavaScript).
 
 Documentation
