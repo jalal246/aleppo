@@ -1,4 +1,3 @@
-export { default as generators } from './src/generators';
 export { default as getters } from './src/getters';
 export { default as doo } from './src/doo';
 
@@ -21,7 +20,3 @@ export {
 export {
   hasKey,
 } from './src/has';
-
-export {
-  wait,
-} from './src/wait';
