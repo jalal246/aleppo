@@ -1,38 +1,19 @@
 import {
-  LONG_YEAR,
-  SHORT_YEAR,
-  NUM_MONTH,
-  SHORT_MONTH,
-  LONG_MONTH,
-  NUM_WEEK,
-  SHORT_WEEK,
-  LONG_WEEK,
-  NUM_DAY,
-  SHORT_DAY,
-  LONG_DAY,
-  NUM_HOUR,
-  NUM_MINUTE,
-  NUM_SECOND,
-  NUM_MILISECOND,
-  // time constants
-  MILISECOND,
-  SECOND,
-  MINUTE,
-  HOUR,
-  DAY,
-  WEEK,
-  MONTH,
-  YEAR,
-  // func
+  DATE,
+  TIME,
+} from '../../shared/regex';
+
+import {
+  DELAY_VALUES,
+} from '../../shared/constants';
+
+import {
   err,
-} from '../../shared';
+} from '../../shared/funcs';
 
-
-import { isValid } from '../../is';
-
-// const err = (opt) => {
-//   throw new Error(`Ops! Cannot recognize option format: ${opt}`);
-// };
+import {
+  isValid,
+} from '../../is';
 
 /**
  * Calculate time duration accourding to given time format.
@@ -49,33 +30,40 @@ import { isValid } from '../../is';
 
 const get = (val, reqFormat) => {
   // year
-  if (reqFormat.match(LONG_YEAR) || reqFormat.match(SHORT_YEAR)) {
-    return val * YEAR;
+  if (reqFormat.match(DATE.YEAR.FULL) ||
+    reqFormat.match(DATE.YEAR.SHORT)) {
+    return val * DELAY_VALUES[7];
   }
   // month
-  if (reqFormat.match(NUM_MONTH) || reqFormat.match(SHORT_MONTH) || reqFormat.match(LONG_MONTH)) {
-    return val * MONTH;
+  if (reqFormat.match(DATE.MONTH.CHAR) ||
+    reqFormat.match(DATE.MONTH.SHORT) ||
+    reqFormat.match(DATE.MONTH.FULL)) {
+    return val * DELAY_VALUES[6];
   }
   // week
-  if (reqFormat.match(NUM_WEEK) || reqFormat.match(SHORT_WEEK) || reqFormat.match(LONG_WEEK)) {
-    return val * WEEK;
+  if (reqFormat.match(DATE.WEEK.CHAR) ||
+    reqFormat.match(DATE.WEEK.SHORT) ||
+    reqFormat.match(DATE.WEEK.FULL)) {
+    return val * DELAY_VALUES[5];
   }
   // day
-  if (reqFormat.match(NUM_DAY) || reqFormat.match(SHORT_DAY) || reqFormat.match(LONG_DAY)) {
-    return val * DAY;
+  if (reqFormat.match(DATE.DAY.CHAR) ||
+    reqFormat.match(DATE.DAY.SHORT) ||
+    reqFormat.match(DATE.DAY.FULL)) {
+    return val * DELAY_VALUES[4];
   }
   // time
-  if (reqFormat.match(NUM_HOUR)) {
-    return val * HOUR;
+  if (reqFormat.match(TIME.HOUR.FULL)) {
+    return val * DELAY_VALUES[3];
   }
-  if (reqFormat.match(NUM_MINUTE)) {
-    return val * MINUTE;
+  if (reqFormat.match(TIME.MINUTE)) {
+    return val * DELAY_VALUES[2];
   }
-  if (reqFormat.match(NUM_SECOND)) {
-    return val * SECOND;
+  if (reqFormat.match(TIME.SECOND)) {
+    return val * DELAY_VALUES[1];
   }
-  if (reqFormat.match(NUM_MILISECOND)) {
-    return val * MILISECOND;
+  if (reqFormat.match(TIME.MILISECOND)) {
+    return val * DELAY_VALUES[0];
   }
   return err(val);
 };

@@ -1,11 +1,6 @@
 export {   // is
   isLeap,
   isCommon,
-  // type
   yearType,
-  // num
-  monthDaysNum,
-  // count
-  countDays,
-  countWeeks,
+  daysCountInMonth,
 } from './info';

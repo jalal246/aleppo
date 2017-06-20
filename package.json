@@ -2,13 +2,18 @@
   "name": "aleppo",
   "version": "1.3.1",
   "description": "General node functions, useful for any project.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
+    "e": "istanbul help config",
     "commit": "git-cz",
-    "test": "mocha --compilers js:babel-core/register --require babel-polyfill test -w",
+    "check-cov": "istanbul check-coverage --root coverage --statement 97 --branch 91 --function 98 --line 99",
+    "test": "mocha  --compilers js:babel-core/register --require babel-polyfill --recursive test",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- R spec --compilers js:babel-core/register --require  babel-polyfill --recursive test",
+    "build": "babel -s inline -d lib src",
+    "prepublish": "npm test-cov && npm run check-coverage && npm run build",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
@@ -51,11 +56,18 @@
     "eslint": "3.19.0",
     "eslint-config-airbnb-base": "11.1.3",
     "eslint-plugin-import": "2.2.0",
+    "ghooks": "2.0.0",
+    "istanbul": "1.1.0-alpha.1",
     "mocha": "3.3.0",
     "semantic-release": "^6.3.6"
   },
   "dependencies": {},
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run test && npm run check-coverage"
+    }
   }
 }

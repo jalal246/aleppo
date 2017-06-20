@@ -13,7 +13,8 @@ const isBool = candidate => typeof candidate === 'boolean';
 const isNum = candidate => typeof candidate === 'number';
 const isStr = candidate => typeof candidate === 'string';
 const isFn = candidate => typeof candidate === 'function';
-const isSymb = candidate => typeof candidate === 'symbol';
+// const isSymb = candidate => typeof candidate === 'symbol';
+// const isEqual = (n1, n2) => n1.length === n2.length && n1.every((v, i) => v === n2[i]);
 
 // mixed
 const isArr = candidate => Array.isArray(candidate);
@@ -28,7 +29,7 @@ module.exports = {
   isNum,
   isStr,
   isFn,
-  isSymb,
+  // isSymb,
   isArr,
   isZeroLength,
 };

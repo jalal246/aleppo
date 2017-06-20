@@ -1,11 +1,17 @@
-# lib-build
-lib
+# src-es6
+src
 
 # Other
 other
 
 # coverage
 coverage
+
+# bable
+.babelrc
+
+# eslintrc
+.eslintrc.js
 
 # IDE
 .idea

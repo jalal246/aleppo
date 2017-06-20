@@ -1,50 +1,75 @@
-import { MONTH_DAY_COUNT, err } from '../../../shared';
+import {
+  MONTH_DAY_COUNT,
+} from '../../../shared/constants';
+import err from '../../../shared/funcs';
 
-// year
-const isLeap = (year = new Date().getFullYear()) => (
-  (year % 4) === 0) && ((year % 100) !== 0) && ((year % 400) !== 0
-);
-const isCommon = (year = new Date().getFullYear()) => !isLeap(year);
-const yearType = (year = new Date().getFullYear()) => (isLeap(year) ? 'leap' : 'common');
+
+const yearType = (
+  year = new Date().getFullYear(),
+  isProgrammaticCall = false,
+) => {
+  // validate only if the user call the function
+  if (!isProgrammaticCall) {
+    if (typeof year !== 'number' || year < 0) return err(year);
+  }
+  if (year % 4 !== 0) return 'common';
+  else if (year % 100 !== 0) return 'leap';
+  else if (year % 400 !== 0) return 'common';
+  return 'leap';
+};
+
+const isLeap = (
+  year = new Date().getFullYear(),
+  isProgrammaticCall = false,
+) => yearType(year, isProgrammaticCall) === 'leap';
+
+
+const isCommon = (
+  year = new Date().getFullYear(),
+  isProgrammaticCall = false,
+) => yearType(year, isProgrammaticCall) === 'common';
 
 // month
-const monthDaysNum = (monthNum = new Date().getMonth(), year = new Date().getFullYear()) => {
-  if (monthNum > 12) {
-    return err(monthNum);
+const daysCountInMonth = (
+  monthNum,
+  year = new Date().getFullYear(),
+  isProgrammaticCall = false,
+) => {
+  let isProg = isProgrammaticCall;
+  let month = monthNum;
+  if (monthNum === undefined) {
+    month = new Date().getMonth();
+    isProg = true;
   }
-  if (monthNum === 2) {
-    if (isLeap(year)) {
+  if (isProg) {
+    if (month === 1) {
+      if (isLeap(year, true)) {
+        return 29;
+      }
+      return 28;
+    }
+    return MONTH_DAY_COUNT[month];
+  }
+  // called directly by user
+  if (month === 2) {
+    if (isLeap(year, true)) {
       return 29;
     }
     return 28;
   }
-  return MONTH_DAY_COUNT[monthNum];
-};
-
-// count
-
-// "5/25/2017"
-const countDays = (date) => {
-  const dateArray = new Date(date).toLocaleDateString().split('/');
-  let dayCount = 0;
-  for (let i = 0; i <= parseInt(dateArray[0], 10) - 1; i += 1) {
-    dayCount += monthDaysNum(i, parseInt(dateArray[2], 10));
+  if (month > 12 ||
+    month < 0 ||
+    year < 0 ||
+    typeof month !== 'number' ||
+    typeof year !== 'number') {
+    return err(month);
   }
-  dayCount += parseInt(dateArray[1], 10);
-  return dayCount;
+  return MONTH_DAY_COUNT[month === 0 ? 0 : month - 1];
 };
-
-const countWeeks = date => Math.floor(countDays(date) / 7);
 
 export {
-  // is
   isLeap,
   isCommon,
-  // type
   yearType,
-  // num
-  monthDaysNum,
-  // count
-  countDays,
-  countWeeks,
+  daysCountInMonth,
 };

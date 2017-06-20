@@ -13,7 +13,7 @@ const isBool = (...candidates) => !(doo.array([oneArg.isBool], [...candidates]).
 const isNum = (...candidates) => !(doo.array([oneArg.isNum], [...candidates]).includes(false));
 const isStr = (...candidates) => !(doo.array([oneArg.isStr], [...candidates]).includes(false));
 const isFn = (...candidates) => !(doo.array([oneArg.isFn], [...candidates]).includes(false));
-const isSymb = (...candidates) => !(doo.array([oneArg.isSymb], [...candidates]).includes(false));
+// const isSymb = (...candidates) => !(doo.array([oneArg.isSymb], [...candidates]).includes(false));
 
 // mixed
 const isArr = (...candidates) =>
@@ -36,7 +36,7 @@ export {
   isNum,
   isStr,
   isFn,
-  isSymb,
+  // isSymb,
   isArr,
   isZeroLength,
   isStrEmpty,
