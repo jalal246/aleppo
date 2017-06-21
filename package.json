@@ -10,6 +10,7 @@
     "commit": "git-cz",
     "check-cov": "istanbul check-coverage --root coverage --statement 97 --branch 91 --function 98 --line 99",
     "test": "mocha  --compilers js:babel-core/register --require babel-polyfill --recursive test",
+    "test:single": "mocha  --compilers js:babel-core/register --require babel-polyfill --recursive test -w",
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- R spec --compilers js:babel-core/register --require  babel-polyfill --recursive test",
     "report-cov": "cat ./coverage/lcov.info | codecov",
     "prebuild": "rimraf lib",

@@ -36,9 +36,9 @@ const resolver = (timeConstants, times, expectedTSfunc, dateUnit, reqMathType, r
         requiredDate[2], // year
         requiredDate[1], // month
         requiredDate[0], // day
-        new Date(nwTS).getHours(), // hours
-        new Date(nwTS).getMinutes(), // minutes
-        new Date(nwTS).getSeconds(), // seconds
+        new Date(nwTS).getUTCHours(), // hours
+        new Date(nwTS).getUTCMinutes(), // minutes
+        new Date(nwTS).getUTCSeconds(), // seconds
       ).getTime();
     } else {
       // resultForm is full date.
@@ -46,9 +46,9 @@ const resolver = (timeConstants, times, expectedTSfunc, dateUnit, reqMathType, r
         requiredDate[2], // year
         requiredDate[1], // month
         requiredDate[0], // day
-        new Date(nwTS).getHours(), // hours
-        new Date(nwTS).getMinutes(), // minutes
-        new Date(nwTS).getSeconds(), // seconds
+        new Date(nwTS).getUTCHours(), // hours
+        new Date(nwTS).getUTCMinutes(), // minutes
+        new Date(nwTS).getUTCSeconds(), // seconds
       ).getTime());
     }
   } else {

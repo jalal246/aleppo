@@ -13,18 +13,18 @@ import countBtw from '../../../countBtw';
  */
 
 // year
-const fullYear = ts => new Date(ts).getFullYear();
+const fullYear = ts => new Date(ts).getUTCFullYear();
 const shortYaer = ts => parseInt(fullYear(ts).toString().slice(2), 10); // year as shortcut
 
 // month
-const monthNum = ts => new Date(ts).getMonth() + 1; // January is 0.
+const monthNum = ts => new Date(ts).getUTCMonth() + 1; // January is 0.
 const shortMonth = ts => MONTHSABBR[monthNum(ts) - 1];
 const fullMonth = ts => MONTHS[monthNum(ts) - 1];
 
 const weekNum = ts => countBtw(
   'week',
   new Date(
-    new Date().getFullYear(),
+    new Date().getUTCFullYear(),
     0,
     1,
   ).getTime(),
@@ -33,17 +33,17 @@ const weekNum = ts => countBtw(
 
 
 // day
-const dayNum = ts => new Date(ts).getDay();
+const dayNum = ts => new Date(ts).getUTCDay();
 const shortDay = ts => WEEKDAYSABBR[dayNum(ts)];
 const fullDay = ts => WEEKDAYS[dayNum(ts)];
 
 // time
-const hour24 = ts => new Date(ts).getHours();
+const hour24 = ts => new Date(ts).getUTCHours();
 
 // credit : https://stackoverflow.com/questions/8888491/how-do-you-display-javascript-datetime-in-12-hour-am-pm-format
 const hour12 = (ts) => {
-  let hours = new Date(ts).getHours();
-  let minutes = new Date(ts).getMinutes();
+  let hours = new Date(ts).getUTCHours();
+  let minutes = new Date(ts).getUTCMinutes();
   const amPM = hours >= 12 ? 'pm' : 'am';
   hours %= 12;
   hours = hours || 12; // the hour '0' should be '12'
@@ -51,9 +51,9 @@ const hour12 = (ts) => {
   return `${hours}:${minutes} ${amPM}`;
 };
 
-const minutes = ts => new Date(ts).getMinutes();
+const minutes = ts => new Date(ts).getUTCMinutes();
 
-const seconds = ts => new Date(ts).getSeconds();
+const seconds = ts => new Date(ts).getUTCSeconds();
 
 // timeStamp
 const timeStamp = ts => new Date(ts).getTime();

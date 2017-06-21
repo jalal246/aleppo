@@ -5,7 +5,7 @@ import err from '../../../shared/funcs';
 
 
 const yearType = (
-  year = new Date().getFullYear(),
+  year = new Date().getUTCFullYear(),
   isProgrammaticCall = false,
 ) => {
   // validate only if the user call the function
@@ -19,26 +19,26 @@ const yearType = (
 };
 
 const isLeap = (
-  year = new Date().getFullYear(),
+  year = new Date().getUTCFullYear(),
   isProgrammaticCall = false,
 ) => yearType(year, isProgrammaticCall) === 'leap';
 
 
 const isCommon = (
-  year = new Date().getFullYear(),
+  year = new Date().getUTCFullYear(),
   isProgrammaticCall = false,
 ) => yearType(year, isProgrammaticCall) === 'common';
 
 // month
 const daysCountInMonth = (
   monthNum,
-  year = new Date().getFullYear(),
+  year = new Date().getUTCFullYear(),
   isProgrammaticCall = false,
 ) => {
   let isProg = isProgrammaticCall;
   let month = monthNum;
   if (monthNum === undefined) {
-    month = new Date().getMonth();
+    month = new Date().getUTCMonth();
     isProg = true;
   }
   if (isProg) {

@@ -8,9 +8,9 @@
  * @return {array} - array of from date.[day, month, year]
  **/
 const readTS = ts => [
-  new Date(ts).getDate(),
-  new Date(ts).getMonth(),
-  new Date(ts).getFullYear(),
+  new Date(ts).getUTCDate(),
+  new Date(ts).getUTCMonth(),
+  new Date(ts).getUTCFullYear(),
 ];
 
 

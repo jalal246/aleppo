@@ -4,9 +4,9 @@ import {
 
 // return array date. [ d, m ,y]
 const dateArray = ts => [
-  ts.getDate(),
-  ts.getMonth(),
-  ts.getFullYear(),
+  ts.getUTCDate(),
+  ts.getUTCMonth(),
+  ts.getUTCFullYear(),
 ];
 
 /**

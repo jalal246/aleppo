@@ -1,5 +1,5 @@
 [![Travis](https://img.shields.io/travis/rust-lang/rust.svg)](https://travis-ci.org/Jimmy02020/aleppo)
-[![Codecov](https://img.shields.io/codecov/c/github/codecov/example-python.svg)]()
+[![Codecov](https://img.shields.io/codecov/c/github/codecov/example-python.svg)](https://codecov.io/gh/Jimmy02020/aleppo)
 [![npm](https://img.shields.io/npm/dw/localeval.svg)](https://www.npmjs.com/package/aleppo)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/Jimmy02020/aleppo/blob/master/LICENSE)
 

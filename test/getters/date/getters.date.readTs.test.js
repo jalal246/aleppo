@@ -11,7 +11,7 @@ describe('getters', () => {
     describe('D- readTs', () => {
       const ts = '1495559745799';
       it('returns readable timestamp object', () => expect(date.readTs(ts)).to.deep.equal({
-        yr: 2017, mo: 5, dy: 23, hr: 19, min: 15, sec: 45,
+        yr: 2017, mo: 5, dy: 23, hr: 17, min: 15, sec: 45,
       }));
       it('throws error for fake format', () => {
         expect(() => {

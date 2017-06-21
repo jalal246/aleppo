@@ -25,12 +25,12 @@ const readTs = (ts) => {
   }
   if (date) {
     return {
-      [DELAY_LABELS[7]]: date.getFullYear(),
-      [DELAY_LABELS[6]]: date.getMonth() + 1,
-      [DELAY_LABELS[4]]: date.getDate(),
-      [DELAY_LABELS[3]]: date.getHours(),
-      [DELAY_LABELS[2]]: date.getMinutes(),
-      [DELAY_LABELS[1]]: date.getSeconds(),
+      [DELAY_LABELS[7]]: date.getUTCFullYear(),
+      [DELAY_LABELS[6]]: date.getUTCMonth() + 1,
+      [DELAY_LABELS[4]]: date.getUTCDate(),
+      [DELAY_LABELS[3]]: date.getUTCHours(),
+      [DELAY_LABELS[2]]: date.getUTCMinutes(),
+      [DELAY_LABELS[1]]: date.getUTCSeconds(),
     };
   }
   return err(ts);
