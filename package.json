@@ -11,6 +11,7 @@
     "check-cov": "istanbul check-coverage --root coverage --statement 97 --branch 91 --function 98 --line 99",
     "test": "mocha  --compilers js:babel-core/register --require babel-polyfill --recursive test",
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- R spec --compilers js:babel-core/register --require  babel-polyfill --recursive test",
+    "report-cov": "cat ./coverage/lcov.info | codecov",
     "prebuild": "rimraf lib",
     "build": "babel --out-dir lib src",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
@@ -55,6 +56,7 @@
     "chai": "3.5.0",
     "chai-as-promised": "6.0.0",
     "chai-iterator": "1.1.4",
+    "codecov.io": "0.1.6",
     "commitizen": "2.9.6",
     "cz-conventional-changelog": "2.0.0",
     "eslint": "3.19.0",
@@ -75,7 +77,7 @@
       "pre-commit": "npm run test && npm run check-cov"
     }
   },
-  "babel":{
+  "babel": {
     "presets": [
       "es2015",
       "stage-2"

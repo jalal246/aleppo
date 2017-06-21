@@ -16,6 +16,7 @@ script:
   - npm run check-cov
   - npm run build
 after_success:
+  - npm run report-cov
   - npm run semantic-release
 branches:
   except:
