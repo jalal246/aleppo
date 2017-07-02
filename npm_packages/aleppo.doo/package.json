@@ -1,0 +1,31 @@
+{
+  "name": "aleppo.doo",
+  "version": "2.0.0",
+  "description": "The [aleppo](https://github.com/Jimmy02020/aleppo) method `doo` exported as a [Node.js](https://nodejs.org/) module.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"See https://travis-ci.org/Jimmy02020/aleppo for testing details.\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jimmy02020/aleppo.git"
+  },
+  "keywords": [
+    "javascript-tools",
+    "javascript",
+    "nodejs",
+    "node",
+    "node-js",
+    "nodejs-modules",
+    "node-modules",
+    "functions",
+    "random",
+    "boolean",
+    "delay",
+    "date",
+    "time"
+  ],
+  "author": "'Jalal Maskoun<'jimmy002020@gmail.com'>",
+  "homepage": "https://github.com/Jimmy02020/aleppo#readme",
+  "license": "'MIT'"
+}
