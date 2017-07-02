@@ -1,4 +1,6 @@
-export { default as getters } from './getters';
+// export { default as getters } from './getters';
+export { default as date } from './date';
+export { default as delay } from './delay';
 export { default as doo } from './doo';
 
 export {
@@ -16,6 +18,7 @@ export {
   isStrEmpty,
   isArrEmpty,
 } from './is';
+
 
 // export {
 //   hasKey,

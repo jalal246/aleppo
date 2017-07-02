@@ -14,7 +14,7 @@ Usage
 -------------
 
 ### Validation - IS
-
+* [npm package](#npm_is)
 * [isUn](#isUn)
 * [isNull](#isNull)
 * [isValid](#isValid)
@@ -30,26 +30,28 @@ Usage
 
 
 ### Function execution - DOO
-
+* [npm package](#npm_doo)
 * [iterator](#doo_iterator)
 * [array](#doo_array)
 * [object](#doo_object)
 
-### Getters
-* [delay](#getters_delay)
-  * [options allowed](#getters_delay_options)
-* [date](#getters_date)
-  * [now](#getters_date_now)
-  * [later](#getters_date_later)
-  * [ago](#getters_date_ago)
-  * [readTs](#getters_date_readTs)
-  * [isLeap](#getters_date_isLeap)
-  * [isCommon](#getters_date_isCommon)
-  * [yearType](#getters_date_yearType)
-  * [daysCountInMonth"](#getters_date_dayCountInMonth)
-  * [countBtw](#getters_date_countBtw)
-  * [options allowed](#getters_date_options)
-  * [separators allowed](#getters_date_separators)
+### Time and date
+* [delay](#delay)
+  * [npm package](#npm_delay)
+  * [options allowed](#delay_options)
+* [date](#date)
+  * [npm package](#npm_date)
+  * [now](#date_now)
+  * [later](#date_later)
+  * [ago](#date_ago)
+  * [readTs](#date_readTs)
+  * [isLeap](#date_isLeap)
+  * [isCommon](#date_isCommon)
+  * [yearType](#date_yearType)
+  * [daysCountInMonth](#date_dayCountInMonth)
+  * [countBtw](#date_countBtw)
+  * [options allowed](#date_options)
+  * [separators allowed](#date_separators)
 
 ### Other
 
@@ -67,7 +69,7 @@ git clone git@github.com:jimmy02020/aleppo.git
 cd aleppo
 ```
 
- npm
+Using npm:
 ```sh
 $ npm install aleppo
 ```
@@ -75,7 +77,13 @@ $ npm install aleppo
 Validation - IS
 --------------
 
-Boolean validation functions. IS-functions can deal with one argument or multiple arguments as it accepts the [spread syntax](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Spread_operator).   
+Boolean validation functions. IS-functions can deal with one argument or multiple arguments as it accepts the [spread syntax](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Spread_operator).
+
+<a name="npm_is" />
+
+```bash
+$ npm i aleppo.is
+```
 
 <a name="isUn" />
 
@@ -86,7 +94,7 @@ Checks if undefined returns true, otherwise returns false.
 __Examples__
 
 ```javascript
-var isUn = require('aleppo')
+const { isUn } = require('aleppo')
 isUn(undefined, a, b, c, d, e) // true
 isUn('hi', 'there', 'I am defined') // false
 isUn('defined', y, undefined) // false. one of parameters failed to pass.
@@ -100,7 +108,7 @@ Checks if null returns true otherwise returns false.
 __Examples__
 
 ```javascript
-var isNull = require('aleppo')
+const { isNull } = require('aleppo')
 isNull(null, null) // true
 isNull(null, "hi") // false, one of the parameters failed.
 isNull(undefined, null, 'still', 'false', 'because', 'of undefined and null') // false
@@ -115,7 +123,7 @@ Checks if not being undefined or null returns true otherwise returns false.
 __Examples__
 
 ```javascript
-var isValid = require('aleppo')
+const { isValid } = require('aleppo')
 isValid("welcome", "to", "the", "club") // true
 isValid(null, "hi") // false, one of the parameters failed.
 isValid(undefined, null, 'still', 'false', 'because', 'of undefined and null') // false
@@ -129,7 +137,7 @@ Checks if object returns true otherwise returns false.
 __Examples__
 
 ```javascript
-var isObj = require('aleppo')
+const { isObj } = require('aleppo')
 isObj({ boo: 'foo' }, { baz: 'doo' }) // true
 isObj(null, { boo: 'foo' }, { baz: 'doo' }) // false
 ```
@@ -142,7 +150,7 @@ Checks if Boolean returns true otherwise returns false.
 __Examples__
 
 ```javascript
-var isBool = require('aleppo')
+const { isBool } = require('aleppo')
 isBool(true, false) // true
 isBool(1,2,3,4,5,6,7,100) // false
 ```
@@ -155,7 +163,7 @@ Checks if numbers returns true otherwise returns false.
 __Examples__
 
 ```javascript
-var isNum = require('aleppo')
+const { isNum } = require('aleppo')
 isNum('hello') // false
 isNum(1,2,3,4,5,6,7,100) // true
 ```
@@ -169,7 +177,7 @@ Checks if string returns true otherwise returns false.
 __Examples__
 
 ```javascript
-var isStr = require('aleppo')
+const { isStr } = require('aleppo')
 isStr('hello', 'thanks for' , 'being here') // true
 isStr(1,2,3,4,5,6,7,100) // false
 ```
@@ -183,7 +191,7 @@ Checks if function returns true otherwise returns false.
 __Examples__
 
 ```javascript
-var isFn = require('aleppo')
+const { isFn } = require('aleppo')
 isFn(function () { return 'tiny  fnc' }) // true
 isFn(1,2,3,4,5,6,7,100) // false
 ```
@@ -197,7 +205,7 @@ Checks if arrays returns true otherwise returns false.
 __Examples__
 
 ```javascript
-var isArr = require('aleppo')
+const { isArr } = require('aleppo')
 isArr(['yeah'], [1,3], ['sure it is']) // true
 isArr(1,2,3,4,5,6,7,100, 'string') // false
 ```
@@ -211,7 +219,7 @@ Checks if strings zero length returns true otherwise returns false.
 __Examples__
 
 ```javascript
-var isZeroLength = require('aleppo')
+const { isZeroLength } = require('aleppo')
 isZeroLength([], '', []) // true
 isZeroLength([1,2,3,4,5,6,7,100], 'string', [], '') // false
 ```
@@ -225,7 +233,7 @@ Checks if strings are empty returns true otherwise returns false.
 __Examples__
 
 ```javascript
-var isStrEmpty = require('aleppo')
+const { isStrEmpty } = require('aleppo')
 isStrEmpty('') // true
 isStrEmpty('not empty string') // false
 ```
@@ -239,7 +247,7 @@ Checks if arrays are empty returns true otherwise returns false.
 __Examples__
 
 ```javascript
-var isArrEmpty = require('aleppo')
+const { isArrEmpty } = require('aleppo')
 isArrEmpty([]) // true
 isArrEmpty(['what do you think?']) // false
 ```
@@ -250,6 +258,12 @@ Function execution - DOO
 Executes multiple arguments with multiple functions in one call. Returns the results in required form.
 It passes each argument to all functions, after it's done with the first argument, it moves to process the second argument, so on so forth.
 
+<a name="npm_doo" />
+
+```bash
+$ npm i aleppo.doo
+```
+
 <a name="doo_iterator" />
 
 ### doo.iterator([...funcs], [...args])
@@ -259,12 +273,12 @@ Returns [iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 __Example__ : ```doo.iterator```
 
 ```javascript
-var doo = require('aleppo')
-// suppose we have three functions
+const { doo } = require('aleppo')
+// suppose we have two functions
 function  greetings (name) { return `hello ${name}` }
 function  bye (name) { return `goodbye ${name}!` }
 
-var result =  doo.iterator([greetings, bye], ['Jimmy', 'Catherine'])
+const result =  doo.iterator([greetings, bye], ['Jimmy', 'Catherine'])
 // pass the first argument to the first function.
 result.next() // { value: 'hello Jimmy', done: false }
 
@@ -291,7 +305,7 @@ __Example__
 
 ```javascript
 // continue working with same functions above
-var result =  doo.array([greetings, bye], ['Jimmy', 'Catherine'])
+const result =  doo.array([greetings, bye], ['Jimmy', 'Catherine'])
 console.log(result);
 // will print
 [ 'hello Jimmy', 'goodbye Jimmy!', 'hello Catherine', 'goodbye Catherine!' ]
@@ -307,7 +321,7 @@ __Example__
 
 ```javascript
 // continue working with same functions above
-var result =  doo.object([greetings, bye], ['Jimmy', 'Catherine'])
+const result =  doo.object([greetings, bye], ['Jimmy', 'Catherine'])
 console.log(result);
 // will print
 [
@@ -318,23 +332,29 @@ console.log(result);
 ]
 ```
 
-Getters
--------
 
-Gets object, data, or delay in required form.
+Time and date
+-------------
 
-```javascript
-var getters = require('aleppo')
-```
+A set of functions to deal and manipulate with time and date.
 
+<a name="delay" />
 
-<a name="getters_delay" />
-
-### Delay: getters.delay(option)
+### Delay
 
 Calculates delay time according to given option then returns it in milliseconds.
 
-<a name= "getters_delay_options" />
+<a name="npm_delay" />
+
+```bash
+$ npm i aleppo.delay
+```
+
+```javascript
+const { delay } = require('aleppo')
+```
+
+<a name= "delay_options" />
 
 ###### Types of options formats are:
 * ```year/years/yrs/y/yy/yyy/yyyy```: delay by years.   
@@ -349,34 +369,39 @@ Calculates delay time according to given option then returns it in milliseconds.
 __Example__
 
 ```javascript
-var getters = require('aleppo')
+const { delay } = require('aleppo')
 
-getters.delay('1h') //  3600000.
-setTimeout(()=>'hello from the other side', getters.delay('10m') + Date.now());
+delay('1h') //  3600000.
+setTimeout(()=>'hello from the other side', delay('10m') + Date.now());
 // will print hello form the other side after ten minutes from now.
 ```
 
-<a name="getters_date" />
+<a name="date" />
 
 ### Date:
 
 Deals with time and date, in readable form. It has nine major helper functions to compute time and date.
 
-<a name= "getters_date_now" />
+<a name="npm_date" />
+
+```bash
+$ npm i aleppo.date
+```
+
+<a name= "date_now" />
 
 #### date.now([, options])
 
 Returns current date or time format according to required option.
-  - ```options``` is String. [Here all valid options](#getters_date_options).
+  - ```options``` is String. [Here all valid options](#date_options).
   - Default value is current local time.
-  - Date format can use one of the following [separators](#getters_date_separators).
+  - Date format can use one of the following [separators](#date_separators).
   - ```now``` throws an error when options is not String or valid.
 
 __Example__
 
 ```javascript
-var getters = require('aleppo')
-var date = getters.date
+const { date } = require('aleppo')
 
 // default is local time.
 date.now() // 6/17/2017, 3:00:03 PM
@@ -404,13 +429,13 @@ date.now('month') // June
 date.now('wk') // 23
 ```
 
-<a name= "getters_date_later" />
+<a name= "date_later" />
 
 #### date.later(Xoptions[, ts|fullDate])
 
 Returns later date or time according to required option. ```Later``` computes the difference of time accurately, taking into consideration year type and days count in each month.
 
-  - ```Xoptions``` is String. Combined of number of times with [valid options](#getters_date_options). X is 1 by default.
+  - ```Xoptions``` is String. Combined of number of times with [valid options](#date_options). X is 1 by default.
   - ```ts``` If you want to return value in timestamp, pass 'ts'.
   - ```fullDate``` If you want to return full date object, contains { yr, mo, dy, hr, min, sec}
   - Complex date format is not allowed.
@@ -419,8 +444,7 @@ Returns later date or time according to required option. ```Later``` computes th
 __Example__
 
 ```javascript
-var getters = require('aleppo')
-var date = getters.date
+const { date } = require('aleppo')
 
 /*
 * Today is  Sunday, June 18, 2017
@@ -439,13 +463,13 @@ date.later('12mth') // Jun
 date.later('12month') // June
 ```
 
-<a name= "getters_date_ago" />     
+<a name= "date_ago" />     
 
 #### date.ago(Xoptions[, ts|fullDate])
 
 Returns any required format for time or date happened ago from now. ```ago``` computes the difference of time accurately, taking into consideration year type and days count in each month.
 
-  - ```Xoptions``` is String. Combined of number of times with [valid options](#getters_date_options). X is 1 by default.
+  - ```Xoptions``` is String. Combined of number of times with [valid options](#date_options). X is 1 by default.
   - ```ts``` If you want to return value in timestamp, pass 'ts'.
   - ```fullDate``` If you want to return full date object, contains { yr, mo, dy, hr, min, sec}
   - Complex date format is not allowed.
@@ -454,8 +478,7 @@ Returns any required format for time or date happened ago from now. ```ago``` co
 __Example__
 
 ```javascript
-var getters = require('aleppo')
-var date = getters.date
+const { date } = require('aleppo')
 
 /*
 * let's try time here since we tried date above.
@@ -469,7 +492,7 @@ date.ago('2hr12') // 5:30 pm
 date.ago('2hr12', 'ts') // 1497803572706
 ```
 
-<a name= "getters_date_readTs" />
+<a name= "date_readTs" />
 
 #### date.readTs(timestamp)
 
@@ -480,15 +503,14 @@ Returns readable timestamp object. Contains yr, mo, dy, hr, min, sec.
 __Example__
 
 ```javascript
-var getters = require('aleppo')
-var date = getters.date
+const { date } = require('aleppo')
 
 date.readTs(1503247105430)
 // returns
 { yr: 2017, mo: 5, dy: 23, hr: 19, min: 15, sec: 45 }
 ```
 
-<a name= "getters_date_isLeap" />
+<a name= "date_isLeap" />
 
 #### date.isLeap([, year])
 
@@ -499,8 +521,7 @@ Returns Boolean. True if the year is [leap](https://en.wikipedia.org/wiki/Leap_y
 __Example__
 
 ```javascript
-var getters = require('aleppo')
-var date = getters.date
+const { date } = require('aleppo')
 
 date.isLeap(2019) // false
 date.isLeap(2000) // true
@@ -509,7 +530,7 @@ date.isLeap(2000) // true
 date.isLeap() // false
 ```
 
-<a name= "getters_date_isCommon" />
+<a name= "date_isCommon" />
 
 #### date.isCommon([, year])
 
@@ -520,8 +541,7 @@ Returns Boolean. True if the year is [common](https://en.wikipedia.org/wiki/Comm
 __Example__
 
 ```javascript
-var getters = require('aleppo')
-var date = getters.date
+const { date } = require('aleppo')
 
 date.isCommon(2028) // false
 date.isCommon(2018) // true
@@ -530,7 +550,7 @@ date.isCommon(2018) // true
 date.isCommon() // true
 ```
 
-<a name= "getters_date_yearType" />
+<a name= "date_yearType" />
 
 #### date.yearType([, year])
 
@@ -543,8 +563,8 @@ Returns String of year type [common](https://en.wikipedia.org/wiki/Common_year) 
 __Example__
 
 ```javascript
-var getters = require('aleppo')
-var date = getters.date
+const { date } = require('aleppo')
+const date = getters.date
 
 date.yearType(2000) // leap
 
@@ -556,7 +576,7 @@ date.yearType(2028) // leap
 date.yearType() // common
 ```
 
-<a name= "getters_date_daysCountInMonth" />
+<a name= "date_daysCountInMonth" />
 
 #### date.daysCountInMonth([, monthNum] [, year])
 
@@ -570,8 +590,7 @@ Returns number of days in required month. Taking into consideration whether the 
 __Example__
 
 ```javascript
-var getters = require('aleppo')
-var date = getters.date
+const { date } = require('aleppo')
 
 // February in common year
 date.daysCountInMonth(2, 2018) // 28
@@ -586,7 +605,7 @@ date.daysCountInMonth(1, 2017) // 31
 date.daysCountInMonth() // 30
 ```
 
-<a name= "getters_date_countBtw" />
+<a name= "date_countBtw" />
 
 #### date.countBtw(type[, [, from|timestamp] [, to|timestamp ]] [-i])
 
@@ -598,7 +617,7 @@ date.countBtw(type, from, to, i)
 
 Computes the difference between two dates and returns objects of results.
 
-  - ```type``` is type of request, all/year/month/week/day. All relevant [options](#getters_date_options) are valid.
+  - ```type``` is type of request, all/year/month/week/day. All relevant [options](#date_options) are valid.
   - ```from``` String or Number.
     * Default value is 1/1/currentYear.
     * String for date format request should be "dd/mm/yyyy".
@@ -609,13 +628,13 @@ Computes the difference between two dates and returns objects of results.
     * Default value is currentDay/currentMonth/currentYear.
     * If your request type is ```year``` number will be converted to: currentDay/currentMonth/year.
     * ``months`` to currentDay/month/currentYear. ```day``` to day/currentMonth/currentYear.
-  - ```i``` A flag variable, false by default. If you want to include the last day in the result, pass 'i' to include it.
+  - ```i``` A flag constiable, false by default. If you want to include the last day in the result, pass 'i' to include it.
   - returns object of request type and remainder of calculations if there is any.
 
   Note:
   - Both ```from``` and ```to``` accepts timestamp as numbers.
   - One date argument is considered as ```to```.
-  - Date format can use one of the following [separators](#getters_date_separators).
+  - Date format can use one of the following [separators](#date_separators).
   - ```countBtw``` throws an error if:
     - No type is provided.
     - One of the input date is not valid.
@@ -624,8 +643,7 @@ Computes the difference between two dates and returns objects of results.
 __Example__
 
 ```javascript
-var getters = require('aleppo')
-var date = getters.date
+const { date } = require('aleppo')
 
 date.countBtw('yrs')
 // returns:
@@ -732,7 +750,7 @@ date.countBtw('all', '1/1/2010', '18/9/2031')
 }
 ```
 
-<a name= "getters_date_options" />
+<a name= "date_options" />
 
 ###### Available options format:           
 
@@ -756,7 +774,7 @@ date.countBtw('all', '1/1/2010', '18/9/2031')
 * ```local time/localTime``` : local time.  (available only for now function)
 * ```utc``` : UTC time.  (available only for now function)
 
-<a name= "getters_date_separators" />
+<a name= "date_separators" />
 
 ###### Types of valid separators are:
 
